@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "title";
+}
+
+<!--View excepts a List of Characters-->
+@model List<CharacterAdministrationExample.Models.Character>
+
+
+<!--Action: Create (im Homecontroller)
+    Parameter: characterName (The name of the parameter is important and mus match the parameter name of the Create method.) -->
+<form action="Create">
+    <div>
+        <input name="characterName" />
+        <input type="submit" value="Create Character" />
+    </div>
+</form>
+
+<h2>Character</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Name</li>
+    }
+</ul>
