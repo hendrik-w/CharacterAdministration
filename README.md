@@ -6,7 +6,7 @@ Tutorial
 2. Create a new ASP .NET MVC 4 Project and select Internet Application. Under the point view engine select razor!
 3. Add a new razor view file in the Home folder under Views and name it Character.
 4. Add the following code:
-
+```
 @{
     ViewBag.Title = "title";
 }
@@ -32,12 +32,13 @@ Tutorial
         <li>@item.Name</li>
     }
 </ul>
-
+```
 
 5. Change the Name YourApplicationName into the name of your application.
 6. Go to the models folder and add a c# class called Character.
 7. Add the following Code
 
+```
 using System;
 using System.Collections.Generic;
 
@@ -76,15 +77,15 @@ namespace YourApplicationName.Models
         } 
     }
 }
-
+```
 8. Change YourApplicationName
 9. Add a class GlobalVariables into the project.
 10.  Add this code into the class 
-
+```
         public static List<Character> Characters { get; set; } 
-
+```
 11. Go into Controller class HomeController and add the following code
-
+```
    /// <summary>
         /// Views the character html with the param Models.Character.GetAll()
         /// </summary>
@@ -105,6 +106,6 @@ namespace YourApplicationName.Models
             Models.Character.Create(characterName);
             return RedirectToAction("Character");
         }
-        
+```     
 12. Run the application and go to  /Home/Character (like http://localhost:49702/Home/Character)
 13. Add characters like you want.
